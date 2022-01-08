@@ -24,7 +24,9 @@ const currentInstruction = document.getElementById(
   "current-instruction"
 ) as HTMLDivElement;
 const startButton = document.getElementById("start-button") as HTMLDivElement;
-const breatheVideoElem = document.getElementById('breathe-video') as HTMLVideoElement;
+const breatheVideoElem = document.getElementById(
+  "breathe-video"
+) as HTMLVideoElement;
 
 // events
 
@@ -54,20 +56,19 @@ startButton.addEventListener("click", (ev: Event) => {
 });
 
 /**
- * 
+ *
  * @param breathingSeconds the total milliseconds that the next segment should take.
  * @returns A value between 0 and Infinity. e.g. 0.5 is half speed. 2 is double speed.
  */
 function computePlaybackRate(breatheSeconds: number): number {
-
   // We know the video's length is 4 seconds ish. Lets say 4.
   // 2 seconds for breathing in
   // 2 seconds for breathing out
-  
+
   // normal playback speed = 1;
   // half speed = 0.5;
   // double speed = 2;
-  
+
   // 1 second duration
   // 2000 / 1000
   // 4 second duration
@@ -78,9 +79,8 @@ function computePlaybackRate(breatheSeconds: number): number {
   // 2000 / 500
 
   const videoSegmentDuration = 2000;
-  
-  return videoSegmentDuration / breatheSeconds; 
 
+  return videoSegmentDuration / breatheSeconds;
 }
 
 // This timneout based solution does work but is a bit ugly and maybe,
@@ -104,17 +104,14 @@ function startBreathingExercise() {
 }
 
 function stopBreathing() {
-
   clearTimeout(breatheInTimeout);
   clearTimeout(holdTimeout);
   clearTimeout(breatheOutTimout);
-  
+
   if (currentBreathingCycle < totalBreathCycles) {
     currentBreathingCycle++;
     startBreathingExercise();
-  }
-  else {
+  } else {
     currentBreathingCycle = 0;
-    
   }
 }
