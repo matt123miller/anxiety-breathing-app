@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anxiety Breathing</title>
+</head>
+
+<body>
+  <main>
+    <div>
+      <h1>
+        Breathe
+      </h1>
+
+      <div>
+        <label for="breathe-in-seconds">Breathe in</label>
+        <input type="number" id="breathe-in-seconds" value="4" min="1" max="99" step="1">
+      </div>
+      <div>
+        <label for="hold-seconds">Hold breathe</label>
+        <input type="number" id="hold-seconds" value="4" min="1" max="99" step="1">
+      </div>
+      <div>
+        <label for="breathe-out-seconds">Breathe out</label>
+        <input type="number" id="breathe-out-seconds" value="6" min="1" max="99" step="1">
+      </div>
+      <div>
+        <label for="breathe-cycles">Total breathe cycles</label>
+        <input type="number" id="breathe-cycles" value="5" min="1" max="99" step="1">
+      </div>
+
+      <button id="start-button">Start</button>
+
+      <div id="current-instruction"></div>
+
+      <video id="breathe-video" muted playsinline width="200">
+        <source src="breathevideo.mp4" type="video/mp4">
+      </video>
+
+
+    </div>
+  </main>
+  <script src="dist/index.js"></script>
+</body>
+
+</html>
