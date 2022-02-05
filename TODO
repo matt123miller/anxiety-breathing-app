@@ -4,4 +4,21 @@
 ☐ user input validation of number inputs
 ☐ Include information on what this technique is and why it's useful. Provide links to resources?
 ☐ Create, source or buy a 2 second breathing animation. 1 second in, 1 second out.
+  - You can make them like so https://www.videoproc.com/video-editor/make-video-transparent.htm
+  - Video codecs that support transparent background on the web:
+    - https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Video_codecs
+    - Store file in .WebM format
+    - The encoding must support transparency
+
+☐ Could also create it using a simpler shape and html canvas
+  - Maybe just a circle that smoothsteps it's radius??
+
 ☐ Make it not look shit
+  ☐ css vars
+  ☐ Create a simple mobile first layout
+    ☐ Setup simple breakpoints
+    ☐ On mobile have inputs beneath video
+    ☐ On desktop have inputs to right of video
+  
+☐ Consider scroll wheel inc/dec of values
+☐ Deploy to my personal site. Will have to setup GHActions since the gh-pages package no longer works locally for me. See what I did for my personal site repo as inspo.

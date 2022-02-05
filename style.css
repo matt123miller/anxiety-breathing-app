@@ -1,0 +1,49 @@
+body {
+  /* Could also use these colour vars to animate the background colour with the video */
+  --background-main-colour: pink;
+  --background-secondary-colour: #fab49b;
+  --text-colour: #0f0830;
+  --video-width: 80vw;
+  --flex-direction: column;
+}
+
+@media screen and (min-width: 500px) {
+  body {
+    --flex-direction: row;
+    --video-width: 40vw;
+  }
+}
+
+body {
+  background-color: var(--background-main-colour);
+}
+
+main {
+  color: var(--text-colour);
+}
+
+/* h1 {
+  text-align: center;
+}
+
+.flex {
+  width: 90vw;
+  height: 90vh;
+  display: flex;
+  flex-direction: var(--flex-direction);
+  justify-content: space-evenly;
+}
+
+.inputs-container .input input {
+  margin-bottom: 1.25rem;
+}
+
+.inputs-container .input label {
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+.video-container video {
+  width: 100%;
+  max-width: var(--video-width);
+} */
